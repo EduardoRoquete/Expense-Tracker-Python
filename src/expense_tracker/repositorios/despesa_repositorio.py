@@ -48,7 +48,7 @@ class DespesaRepositorio:
         with open(self._caminho_arquivo, "w", encoding="utf-8") as arquivo:
             json.dump(dados_despesas, arquivo, ensure_ascii=False, indent=4)
 
-    def adicionar_despesa(self, despesa:Despesa):
+    def adicionar(self, despesa:Despesa):
 
         todas_despesas = self._despesas
         todas_despesas.append(despesa)
@@ -76,7 +76,7 @@ class DespesaRepositorio:
 
         return False
 
-    def atualizar_despesa(self, valor_id:UUID, nova_despesa:Despesa):
+    def atualizar(self, valor_id:UUID, nova_despesa:Despesa):
 
         todas_despesas = self._despesas
 
